@@ -2,57 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Search Tracker</title>
-
+    <title>Search Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
         }
 
-        .box {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        .search-container {
             text-align: center;
-            width: 350px;
         }
 
-        input[type="search"] {
-            width: 100%;
-            padding: 10px;
+        input[type="text"] {
+            width: 400px;
+            padding: 12px 16px;
             font-size: 16px;
-            margin-bottom: 15px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
         }
 
         button {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            background: #4567b7;
-            color: white;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            background-color: #f8f9fa;
+        }
+
+        button:hover {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
 
-<div class="box">
-    <h2>Search</h2>
-
-    <!-- GET FORM -->
-    <form action="https://getform.io/f/abcd1234" method="GET">
-        <input type="search" name="search_text" placeholder="Type something..." required>
-        <button type="submit">Search</button>
-    </form>
-</div>
+    <div class="search-container">
+        <form action="https://formspree.io/f/xnjnkrrj" method="POST">
+            <input 
+                type="text" 
+                name="search_text" 
+                placeholder="Search..." 
+                required
+            >
+            <br>
+            <button type="submit">Search</button>
+        </form>
+    </div>
 
 </body>
 </html>
